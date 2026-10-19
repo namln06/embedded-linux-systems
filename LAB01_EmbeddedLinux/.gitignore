@@ -1,0 +1,24 @@
+# Editor and operating system files
+*~
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Temporary and log files
+*.tmp
+*.log
+*.bak
+
+# Compiled kernel modules and intermediate objects
+*.o
+*.ko
+*.mod
+*.mod.c
+*.cmd
+Module.symvers
+modules.order
+
+# Python cache
+__pycache__/
+*.pyc
