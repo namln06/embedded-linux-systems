@@ -1,0 +1,18 @@
+Assignment 01 - Task 1 ioctl driver
+Environment: QEMU vexpress-a9
+Kernel: 5.15.223
+
+Test result:
+===== Result: PASS (0 failure(s)) =====
+
+Verified operations:
+- ASGN1_RESET_BUFFER
+- ASGN1_GET_STATS
+- ASGN1_GET_VERSION
+- ASGN1_SET_MODE: Echo mode
+- ASGN1_SET_MODE: Kernel mode
+- Invalid mode returns EINVAL
+- Unsupported ioctl returns ENOTTY
+
+Statistics after two writes and two reads:
+open=1 write=2 read=2 buffer_len=20 last_write_size=12
