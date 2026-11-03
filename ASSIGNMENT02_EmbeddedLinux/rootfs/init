@@ -1,0 +1,26 @@
+#!/bin/sh
+
+mount -t devtmpfs devtmpfs /dev
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+
+echo ""
+echo "======================================"
+echo " Embedded Linux Assignment 2"
+echo "======================================"
+
+insmod /lib/modules/5.15.223/extra/sms_sensor_driver.ko
+
+if [ -e /proc/sms_stats ]; then
+    major=$(awk '$2 == "sms_sensor" {print $1}' /proc/devices)
+
+    if [ -n "$major" ]; then
+        mknod /dev/sms_sensor c "$major" 0
+        echo "SMS sensor driver loaded successfully"
+        echo "Device: /dev/sms_sensor (major=$major)"
+    fi
+else
+    echo "ERROR: SMS sensor driver failed to load"
+fi
+
+exec /bin/sh
