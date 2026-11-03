@@ -1,0 +1,52 @@
+===== TASK 4: REAL-TIME JITTER ANALYSIS =====
+
+Environment:
+- Platform: QEMU vexpress-a9
+- Architecture: ARMv7
+- Kernel: Linux 5.15.223
+- CONFIG_HIGH_RES_TIMERS=y
+- CONFIG_HZ=1000
+- Timer: CLOCK_MONOTONIC
+- Sleep: clock_nanosleep(TIMER_ABSTIME)
+- Samples: 1000
+- Period: 1000 us
+- Memory locking: SUCCESS
+
+===== SCHED_OTHER =====
+Min: 269.000 us
+Average: 399.741 us
+Max: 2339.000 us
+P99: 799.000 us
+
+Histogram:
+0-50 us: 0
+50-100 us: 0
+100-200 us: 0
+200-500 us: 843
+>=500 us: 157
+
+===== SCHED_FIFO =====
+Priority: 50
+Min: 193.000 us
+Average: 286.260 us
+Max: 1731.000 us
+P99: 384.000 us
+
+Histogram:
+0-50 us: 0
+50-100 us: 0
+100-200 us: 1
+200-500 us: 996
+>=500 us: 3
+
+===== COMPARISON =====
+Average reduction: approximately 28.4%
+Maximum reduction: approximately 26.0%
+P99 reduction: approximately 52.0%
+
+Conclusion:
+SCHED_FIFO achieved lower average, maximum and P99
+wakeup latency than SCHED_OTHER in this QEMU experiment.
+
+Results are specific to the QEMU virtual environment
+and should not be interpreted as physical hardware benchmarks.

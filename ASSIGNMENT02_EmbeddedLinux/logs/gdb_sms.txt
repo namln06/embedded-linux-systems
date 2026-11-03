@@ -1,0 +1,14 @@
+===== GDB THREAD DEBUG REPORT =====
+Breakpoint: processor_thread
+
+===== THREADS =====
+5 threads observed: main, sensor, processor, alert, logger
+
+===== CALL STACK OBSERVATIONS =====
+Sensor: sensor_thread -> nanosleep
+Processor: processor_thread
+Alert: mq_timedreceive
+Logger: mq_timedreceive
+
+===== RESULT =====
+GDB successfully inspected all application threads.

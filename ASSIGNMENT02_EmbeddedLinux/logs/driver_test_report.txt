@@ -1,0 +1,44 @@
+===== TASK 2: SENSOR DRIVER TEST REPORT =====
+
+Platform: QEMU vexpress-a9
+Architecture: ARMv7
+Kernel: Linux 5.15.223
+
+1. Character Device
+   Device: /dev/sms_sensor
+   Major: 248
+   Result: PASS
+
+2. CSV Sensor Reading
+   Format: timestamp_ms,temperature,humidity
+   Temperature range: 15-45 C
+   Humidity range: 30-90 %
+   Result: PASS
+
+3. Procfs Statistics
+   Interface: /proc/sms_stats
+   read_count: Updated correctly
+   last_temperature: Updated correctly
+   last_humidity: Updated correctly
+   interval_ms: Updated correctly
+   Result: PASS
+
+4. Valid IOCTL
+   Command: SMS_SET_INTERVAL
+   Test: 200 ms
+   Result: PASS
+
+5. Invalid IOCTL
+   Expected errno: ENOTTY (25)
+   Actual errno: 25
+   Result: PASS
+
+6. Invalid Sampling Interval
+   Interval 0: EINVAL (22)
+   Interval 60001: EINVAL (22)
+   Result: PASS
+
+7. Driver Compilation
+   ARM cross-compilation: SUCCESS
+   Compiler warnings: 0
+   Result: PASS

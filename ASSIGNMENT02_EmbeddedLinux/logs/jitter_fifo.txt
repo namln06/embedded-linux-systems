@@ -1,0 +1,18 @@
+Scheduling policy: SCHED_FIFO
+Priority: 50
+Memory locking: SUCCESS
+
+===== JITTER REPORT =====
+Samples : 1000
+Period  : 1000 us
+Min     : 23.464 us
+Average : 148.926 us
+Max     : 267.517 us
+P99     : 253.880 us
+
+===== JITTER HISTOGRAM =====
+  0 -  50 us : 16
+ 50 - 100 us : 56
+100 - 200 us : 824
+200 - 500 us : 104
+     >=500 us: 0

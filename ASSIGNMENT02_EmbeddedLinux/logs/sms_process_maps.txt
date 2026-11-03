@@ -1,0 +1,34 @@
+5fa9e8f35000-5fa9e8f37000 r--p 00000000 08:03 411692                     /home/lnnam250206/embedded_assignment2/app/sms_app_x86
+5fa9e8f37000-5fa9e8f39000 r-xp 00002000 08:03 411692                     /home/lnnam250206/embedded_assignment2/app/sms_app_x86
+5fa9e8f39000-5fa9e8f3a000 r--p 00004000 08:03 411692                     /home/lnnam250206/embedded_assignment2/app/sms_app_x86
+5fa9e8f3a000-5fa9e8f3b000 r--p 00004000 08:03 411692                     /home/lnnam250206/embedded_assignment2/app/sms_app_x86
+5fa9e8f3b000-5fa9e8f3c000 rw-p 00005000 08:03 411692                     /home/lnnam250206/embedded_assignment2/app/sms_app_x86
+5faa0ec13000-5faa0ec34000 rw-p 00000000 00:00 0                          [heap]
+75c948000000-75c948021000 rw-p 00000000 00:00 0 
+75c948021000-75c94c000000 ---p 00000000 00:00 0 
+75c94d1fc000-75c94d1fd000 ---p 00000000 00:00 0 
+75c94d1fd000-75c94d9fd000 rw-p 00000000 00:00 0 
+75c94d9fd000-75c94d9fe000 ---p 00000000 00:00 0 
+75c94d9fe000-75c94e1fe000 rw-p 00000000 00:00 0 
+75c94e1fe000-75c94e1ff000 ---p 00000000 00:00 0 
+75c94e1ff000-75c94e9ff000 rw-p 00000000 00:00 0 
+75c94e9ff000-75c94ea00000 ---p 00000000 00:00 0 
+75c94ea00000-75c94f200000 rw-p 00000000 00:00 0 
+75c94f200000-75c94f228000 r--p 00000000 08:03 264306                     /usr/lib/x86_64-linux-gnu/libc.so.6
+75c94f228000-75c94f3bd000 r-xp 00028000 08:03 264306                     /usr/lib/x86_64-linux-gnu/libc.so.6
+75c94f3bd000-75c94f415000 r--p 001bd000 08:03 264306                     /usr/lib/x86_64-linux-gnu/libc.so.6
+75c94f415000-75c94f416000 ---p 00215000 08:03 264306                     /usr/lib/x86_64-linux-gnu/libc.so.6
+75c94f416000-75c94f41a000 r--p 00215000 08:03 264306                     /usr/lib/x86_64-linux-gnu/libc.so.6
+75c94f41a000-75c94f41c000 rw-p 00219000 08:03 264306                     /usr/lib/x86_64-linux-gnu/libc.so.6
+75c94f41c000-75c94f429000 rw-p 00000000 00:00 0 
+75c94f478000-75c94f47b000 rw-p 00000000 00:00 0 
+75c94f48b000-75c94f48d000 rw-p 00000000 00:00 0 
+75c94f48d000-75c94f48f000 r--p 00000000 08:03 264301                     /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+75c94f48f000-75c94f4b9000 r-xp 00002000 08:03 264301                     /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+75c94f4b9000-75c94f4c4000 r--p 0002c000 08:03 264301                     /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+75c94f4c5000-75c94f4c7000 r--p 00037000 08:03 264301                     /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+75c94f4c7000-75c94f4c9000 rw-p 00039000 08:03 264301                     /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7fffbdaa7000-7fffbdac8000 rw-p 00000000 00:00 0                          [stack]
+7fffbdb9f000-7fffbdba3000 r--p 00000000 00:00 0                          [vvar]
+7fffbdba3000-7fffbdba5000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]

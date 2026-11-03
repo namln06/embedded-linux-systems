@@ -1,0 +1,213 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 23  of event 'cycles:u'
+# Event count (approx.): 2263915
+#
+# Children      Self  Command      Shared Object         Symbol                                     
+# ........  ........  ...........  ....................  ...........................................
+#
+    38.17%     4.94%  sms_app_x86  libc.so.6             [.] __vfprintf_internal
+            |          
+            |--33.23%--__vfprintf_internal
+            |          |          
+            |          |--12.40%--__mpn_divrem
+            |          |          
+            |          |--12.30%--__GI___printf_fp_l
+            |          |          
+            |          |--4.40%--__mpn_extract_double
+            |          |          
+            |           --4.13%--__memmove_avx_unaligned_erms
+            |          
+             --4.94%--0x761889ffcd40
+                       __vfprintf_internal
+
+    34.29%     0.00%  sms_app_x86  [unknown]             [.] 0x0000761889ffcd40
+            |
+            ---0x761889ffcd40
+               |          
+               |--29.81%--__vfprintf_internal
+               |          |          
+               |          |--8.91%--__mpn_divrem
+               |          |          
+               |          |--7.43%--__GI___printf_fp_l
+               |          |          
+               |          |--4.40%--__mpn_extract_double
+               |          |          
+               |           --4.13%--__memmove_avx_unaligned_erms
+               |          
+                --4.48%--__strchrnul_avx2
+
+    20.48%     0.00%  sms_app_x86  libc.so.6             [.] start_thread
+            |
+            ---start_thread
+               |          
+               |--9.38%--sensor_thread
+               |          pthread_mutex_lock@@GLIBC_2.2.5
+               |          
+               |--7.43%--processor_thread
+               |          buffer_pop
+               |          
+                --3.67%--__vdso_time
+
+    12.40%    12.40%  sms_app_x86  libc.so.6             [.] __mpn_divrem
+            |          
+            |--8.91%--0x761889ffcd40
+            |          __vfprintf_internal
+            |          __mpn_divrem
+            |          
+             --3.49%--0
+                       __vfprintf_internal
+                       __mpn_divrem
+
+    12.30%    12.30%  sms_app_x86  libc.so.6             [.] __GI___printf_fp_l
+            |          
+            |--7.43%--0x761889ffcd40
+            |          __vfprintf_internal
+            |          __GI___printf_fp_l
+            |          
+             --4.87%--0
+                       __vfprintf_internal
+                       __GI___printf_fp_l
+
+    11.85%     0.00%  sms_app_x86  [unknown]             [.] 0000000000000000
+            |
+            ---0
+               |          
+               |--8.36%--__vfprintf_internal
+               |          |          
+               |          |--4.87%--__GI___printf_fp_l
+               |          |          
+               |           --3.49%--__mpn_divrem
+               |          
+                --3.49%--_IO_default_xsputn
+
+     9.38%     9.38%  sms_app_x86  libc.so.6             [.] pthread_mutex_lock@@GLIBC_2.2.5
+            |
+            ---start_thread
+               sensor_thread
+               pthread_mutex_lock@@GLIBC_2.2.5
+
+     9.38%     0.00%  sms_app_x86  sms_app_x86           [.] sensor_thread
+            |
+            ---sensor_thread
+               pthread_mutex_lock@@GLIBC_2.2.5
+
+     7.43%     7.43%  sms_app_x86  sms_app_x86           [.] buffer_pop
+            |
+            ---start_thread
+               processor_thread
+               buffer_pop
+
+     7.43%     0.00%  sms_app_x86  sms_app_x86           [.] processor_thread
+            |
+            ---processor_thread
+               buffer_pop
+
+     5.87%     5.87%  sms_app_x86  sms_app_x86           [.] main
+            |
+            ---__libc_start_call_main
+               main
+
+     5.87%     0.00%  sms_app_x86  libc.so.6             [.] __libc_start_call_main
+            |
+            ---__libc_start_call_main
+               main
+
+     5.28%     5.28%  sms_app_x86  libc.so.6             [.] _IO_file_xsputn@@GLIBC_2.2.5
+            |
+            ---0x761884000d50
+               _IO_file_xsputn@@GLIBC_2.2.5
+
+     5.28%     0.00%  sms_app_x86  [unknown]             [.] 0x0000761884000d50
+            |
+            ---0x761884000d50
+               _IO_file_xsputn@@GLIBC_2.2.5
+
+     4.93%     4.93%  sms_app_x86  ld-linux-x86-64.so.2  [.] _dl_relocate_object
+            |
+            ---0x40
+               _dl_sysdep_start
+               dl_main
+               _dl_relocate_object
+
+     4.93%     0.00%  sms_app_x86  [unknown]             [.] 0x0000000000000040
+            |
+            ---0x40
+               _dl_sysdep_start
+               dl_main
+               _dl_relocate_object
+
+     4.93%     0.00%  sms_app_x86  ld-linux-x86-64.so.2  [.] _dl_sysdep_start
+            |
+            ---_dl_sysdep_start
+               dl_main
+               _dl_relocate_object
+
+     4.93%     0.00%  sms_app_x86  ld-linux-x86-64.so.2  [.] dl_main
+            |
+            ---dl_main
+               _dl_relocate_object
+
+     4.93%     4.93%  sms_app_x86  ld-linux-x86-64.so.2  [.] strcmp
+            |
+            ---strcmp
+
+     4.48%     4.48%  sms_app_x86  libc.so.6             [.] __GI___pthread_disable_asynccancel
+            |
+            ---0x41
+               __GI___pthread_disable_asynccancel
+
+     4.48%     4.48%  sms_app_x86  libc.so.6             [.] __strchrnul_avx2
+            |
+            ---0x761889ffcd40
+               __strchrnul_avx2
+
+     4.48%     0.00%  sms_app_x86  [unknown]             [.] 0x0000000000000041
+            |
+            ---0x41
+               __GI___pthread_disable_asynccancel
+
+     4.40%     4.40%  sms_app_x86  libc.so.6             [.] __mpn_extract_double
+            |
+            ---0x761889ffcd40
+               __vfprintf_internal
+               __mpn_extract_double
+
+     4.40%     4.40%  sms_app_x86  libc.so.6             [.] __GI___futex_abstimed_wait_cancelable64
+            |
+            ---0x11
+               __GI___futex_abstimed_wait_cancelable64
+
+     4.40%     0.00%  sms_app_x86  [unknown]             [.] 0x0000000000000011
+            |
+            ---0x11
+               __GI___futex_abstimed_wait_cancelable64
+
+     4.13%     4.13%  sms_app_x86  libc.so.6             [.] __memmove_avx_unaligned_erms
+            |
+            ---0x761889ffcd40
+               __vfprintf_internal
+               __memmove_avx_unaligned_erms
+
+     3.67%     3.67%  sms_app_x86  [vdso]                [.] __vdso_time
+            |
+            ---start_thread
+               __vdso_time
+
+     3.49%     3.49%  sms_app_x86  libc.so.6             [.] _IO_default_xsputn
+            |
+            ---0
+               _IO_default_xsputn
+
+     3.49%     3.49%  sms_app_x86  libc.so.6             [.] __rpc_thread_destroy
+            |
+            ---__rpc_thread_destroy
+
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
