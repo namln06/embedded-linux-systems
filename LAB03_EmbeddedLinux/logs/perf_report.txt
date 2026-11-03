@@ -1,0 +1,452 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 244  of event 'cycles:P'
+# Event count (approx.): 155389210
+#
+# Children      Self  Command      Shared Object         Symbol                             
+# ........  ........  ...........  ....................  ...................................
+#
+    55.87%    52.05%  perf_target  libm.so.6             [.] __ieee754_log_fma
+            |          
+             --3.83%--__ieee754_log_fma
+                       |          
+                        --1.78%--asm_sysvec_apic_timer_interrupt
+                                  sysvec_apic_timer_interrupt
+                                  |          
+                                   --1.33%--__sysvec_apic_timer_interrupt
+                                             hrtimer_interrupt
+
+    32.61%    32.61%  perf_target  perf_target           [.] heavy_compute
+     8.38%     4.68%  perf_target  libm.so.6             [.] log@@GLIBC_2.29
+            |          
+             --3.70%--log@@GLIBC_2.29
+
+     4.14%     3.70%  perf_target  perf_target           [.] log@plt
+     2.14%     0.00%  perf_target  [kernel.kallsyms]     [k] asm_exc_page_fault
+            |
+            ---asm_exc_page_fault
+               |          
+                --0.77%--exc_page_fault
+                          do_user_addr_fault
+                          handle_mm_fault
+                          __handle_mm_fault
+                          handle_pte_fault
+
+     2.05%     2.05%  perf_target  libm.so.6             [.] __log_finite@GLIBC_2.15@plt
+     1.78%     0.00%  perf_target  [kernel.kallsyms]     [k] asm_sysvec_apic_timer_interrupt
+            |
+            ---asm_sysvec_apic_timer_interrupt
+               sysvec_apic_timer_interrupt
+               |          
+                --1.33%--__sysvec_apic_timer_interrupt
+                          hrtimer_interrupt
+
+     1.78%     0.00%  perf_target  [kernel.kallsyms]     [k] sysvec_apic_timer_interrupt
+            |
+            ---sysvec_apic_timer_interrupt
+               |          
+                --1.33%--__sysvec_apic_timer_interrupt
+                          hrtimer_interrupt
+
+     1.39%     0.00%  perf_target  [unknown]             [.] 0x0000000300000002
+            |
+            ---0x300000002
+               main
+               |          
+                --1.05%--asm_exc_page_fault
+
+     1.39%     0.68%  perf_target  perf_target           [.] main
+            |          
+            |--0.71%--main
+            |          
+             --0.68%--0x300000002
+                       main
+                       asm_exc_page_fault
+
+     1.33%     0.00%  perf_target  [kernel.kallsyms]     [k] __sysvec_apic_timer_interrupt
+            |
+            ---__sysvec_apic_timer_interrupt
+               hrtimer_interrupt
+
+     1.33%     0.44%  perf_target  [kernel.kallsyms]     [k] hrtimer_interrupt
+            |          
+             --0.89%--hrtimer_interrupt
+
+     0.89%     0.00%  perf_target  [unknown]             [.] 0x40f3570000000000
+            |
+            ---0x40f3570000000000
+
+     0.83%     0.00%  perf_target  [kernel.kallsyms]     [k] entry_SYSCALL_64_after_hwframe
+            |
+            ---entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+
+     0.83%     0.00%  perf_target  [kernel.kallsyms]     [k] do_syscall_64
+            |
+            ---do_syscall_64
+               x64_sys_call
+
+     0.83%     0.00%  perf_target  [kernel.kallsyms]     [k] x64_sys_call
+            |
+            ---x64_sys_call
+
+     0.77%     0.00%  perf_target  [kernel.kallsyms]     [k] exc_page_fault
+            |
+            ---exc_page_fault
+               do_user_addr_fault
+               handle_mm_fault
+               __handle_mm_fault
+               handle_pte_fault
+
+     0.77%     0.00%  perf_target  [kernel.kallsyms]     [k] do_user_addr_fault
+            |
+            ---do_user_addr_fault
+               handle_mm_fault
+               __handle_mm_fault
+               handle_pte_fault
+
+     0.77%     0.00%  perf_target  [kernel.kallsyms]     [k] handle_mm_fault
+            |
+            ---handle_mm_fault
+               __handle_mm_fault
+               handle_pte_fault
+
+     0.77%     0.00%  perf_target  [kernel.kallsyms]     [k] __handle_mm_fault
+            |
+            ---__handle_mm_fault
+               handle_pte_fault
+
+     0.77%     0.00%  perf_target  [kernel.kallsyms]     [k] handle_pte_fault
+            |
+            ---handle_pte_fault
+
+     0.45%     0.00%  perf_target  [unknown]             [.] 0x40e90a8000000000
+     0.44%     0.00%  perf_target  [unknown]             [.] 0x40ba350000000000
+     0.44%     0.44%  perf_target  [kernel.kallsyms]     [k] __update_load_avg_cfs_rq
+     0.44%     0.00%  perf_target  [unknown]             [k] 0x40d6fd4000000000
+     0.44%     0.00%  perf_target  [kernel.kallsyms]     [k] __hrtimer_run_queues
+     0.44%     0.00%  perf_target  [kernel.kallsyms]     [k] tick_nohz_highres_handler
+     0.44%     0.00%  perf_target  [kernel.kallsyms]     [k] tick_sched_handle
+     0.44%     0.00%  perf_target  [kernel.kallsyms]     [k] update_process_times
+     0.44%     0.00%  perf_target  [kernel.kallsyms]     [k] scheduler_tick
+     0.44%     0.00%  perf_target  [kernel.kallsyms]     [k] task_tick_fair
+     0.44%     0.00%  perf_target  [unknown]             [.] 0x40f7681000000000
+     0.44%     0.00%  perf_target  [unknown]             [k] 0x40c7e18000000000
+     0.44%     0.44%  perf_target  [kernel.kallsyms]     [k] native_write_msr
+     0.44%     0.00%  perf_target  [unknown]             [k] 0x40f6106000000000
+     0.44%     0.00%  perf_target  [kernel.kallsyms]     [k] tick_program_event
+     0.44%     0.00%  perf_target  [kernel.kallsyms]     [k] clockevents_program_event
+     0.44%     0.00%  perf_target  [unknown]             [.] 0x40f0982000000000
+     0.44%     0.00%  perf_target  [unknown]             [.] 0x40e3906000000000
+     0.44%     0.00%  perf_target  [unknown]             [.] 0x40f4aa9000000000
+     0.44%     0.44%  perf_target  [kernel.kallsyms]     [k] decay_load
+     0.44%     0.00%  perf_target  [unknown]             [k] 0x4095f00000000000
+     0.44%     0.00%  perf_target  [kernel.kallsyms]     [k] irq_exit_rcu
+     0.44%     0.00%  perf_target  [kernel.kallsyms]     [k] __irq_exit_rcu
+     0.44%     0.00%  perf_target  [kernel.kallsyms]     [k] handle_softirqs
+     0.44%     0.00%  perf_target  [kernel.kallsyms]     [k] run_rebalance_domains
+     0.44%     0.00%  perf_target  [kernel.kallsyms]     [k] update_blocked_averages
+     0.44%     0.00%  perf_target  [kernel.kallsyms]     [k] __update_blocked_fair
+     0.44%     0.00%  perf_target  [unknown]             [.] 0x40eeaa0000000000
+     0.44%     0.00%  perf_target  [unknown]             [.] 0x40ebb62000000000
+     0.44%     0.00%  perf_target  [unknown]             [.] 0x40dc304000000000
+     0.44%     0.00%  perf_target  [unknown]             [.] 0x40f20bb000000000
+     0.44%     0.00%  perf_target  [unknown]             [.] 0x40e10e8000000000
+     0.44%     0.00%  perf_target  [unknown]             [.] 0x40e67b2000000000
+     0.44%     0.00%  perf_target  [unknown]             [.] 0x40d1c34000000000
+     0.44%     0.00%  perf_target  [unknown]             [.] 0x40bb9d0000000000
+     0.44%     0.00%  perf_target  [unknown]             [.] 0x40e94c4000000000
+     0.44%     0.00%  perf_target  [unknown]             [.] 0x40d7720000000000
+     0.44%     0.00%  perf_target  [unknown]             [.] 0x40f7808000000000
+     0.44%     0.00%  perf_target  [unknown]             [.] 0x40f0b9a000000000
+     0.44%     0.00%  perf_target  [unknown]             [.] 0x40e425e000000000
+     0.44%     0.00%  perf_target  [unknown]             [.] 0x40caa18000000000
+     0.44%     0.00%  perf_target  [unknown]             [.] 0x40f504d000000000
+     0.44%     0.00%  perf_target  [unknown]             [.] 0x40eca08000000000
+     0.44%     0.00%  perf_target  [unknown]             [.] 0x40def50000000000
+     0.44%     0.00%  perf_target  [unknown]             [.] 0x40e08f8000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40b16a0000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40e4ffe000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40e1560000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40e6468000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40f2e0d000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40f1355000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40d01a0000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40dbb8c000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40f1130000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40c1e68000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40e2e30000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40edea0000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40d2e9c000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40e8902000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40f573a000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40e5426000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40f7cda000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40f5dc2000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40a0e60000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40cf258000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40d5418000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x4057000000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40ede74000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40d742c000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40d77f8000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40f4162000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40d2314000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40cb498000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40f4064000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40f6947000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40ee99a000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40e11c6000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40e082c000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40cf800000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40f1b2a000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40f7ae5000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40f75e7000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40eadd8000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40eb166000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40f266e000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40f1e1d000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40f00b6000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40cab18000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40f5b11000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40f54d3000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40e7278000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40e4d34000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40ee47a000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40f60bc000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40f680b000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40de994000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40c05d0000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40b28b0000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40eb57a000000000
+     0.43%     0.00%  perf_target  [unknown]             [.] 0x40f4d8b000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40e7c66000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40f0ebe000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40f30b7000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40bb7f0000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40e67f0000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40c13f8000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40c1ee8000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40d396c000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40f5b39000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40f00cc000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40ef8be000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40d9f14000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40e128e000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40ed9cc000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40e89ae000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40eee0c000000000
+     0.42%     0.42%  perf_target  [kernel.kallsyms]     [k] folio_remove_rmap_ptes
+     0.42%     0.00%  perf_target  libc.so.6             [.] __munmap
+     0.42%     0.00%  perf_target  [kernel.kallsyms]     [k] __x64_sys_munmap
+     0.42%     0.00%  perf_target  [kernel.kallsyms]     [k] __vm_munmap
+     0.42%     0.00%  perf_target  [kernel.kallsyms]     [k] do_vmi_munmap
+     0.42%     0.00%  perf_target  [kernel.kallsyms]     [k] do_vmi_align_munmap
+     0.42%     0.00%  perf_target  [kernel.kallsyms]     [k] unmap_region
+     0.42%     0.00%  perf_target  [kernel.kallsyms]     [k] unmap_vmas
+     0.42%     0.00%  perf_target  [kernel.kallsyms]     [k] unmap_single_vma
+     0.42%     0.00%  perf_target  [kernel.kallsyms]     [k] unmap_page_range
+     0.42%     0.00%  perf_target  [kernel.kallsyms]     [k] zap_pmd_range.isra.0
+     0.42%     0.00%  perf_target  [kernel.kallsyms]     [k] zap_pte_range
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40e2cc6000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40e35fe000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40f6a54000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40dc8ac000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40f551a000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40f3fa4000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40e22c8000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40c5f18000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40f4546000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40f2bd2000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40f26f7000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40ee01e000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40e8e26000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40ef436000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40efccc000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40e304e000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40d4d60000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40dcd50000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40c7e98000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40c8290000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40dd70c000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40f4369000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40f25e6000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40f5359000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40c1d90000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40e9c02000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40f68f4000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40a6d80000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40e2ae8000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40e2942000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40f77e5000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40e8aa8000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40a9600000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40f4e7e000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40ededa000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40f1ad5000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40eb9f8000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40f4644000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40f02a6000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40e161a000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40f4251000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40b3730000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40f2c0d000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40b5c00000000000
+     0.42%     0.00%  perf_target  [unknown]             [.] 0x40c1ea0000000000
+     0.41%     0.00%  perf_target  [unknown]             [.] 0x40ed2c4000000000
+     0.41%     0.00%  perf_target  [unknown]             [.] 0x40c7b80000000000
+     0.41%     0.00%  perf_target  [unknown]             [.] 0x40f1cb5000000000
+     0.41%     0.00%  perf_target  [unknown]             [.] 0x40d1a00000000000
+     0.41%     0.00%  perf_target  [unknown]             [.] 0x40e12ce000000000
+     0.41%     0.00%  perf_target  [unknown]             [.] 0x40d8c08000000000
+     0.41%     0.00%  perf_target  [unknown]             [.] 0x40f5327000000000
+     0.41%     0.00%  perf_target  [unknown]             [.] 0x40f3560000000000
+     0.41%     0.00%  perf_target  [unknown]             [.] 0x40dbff8000000000
+     0.41%     0.00%  perf_target  [unknown]             [.] 0x40f78ff000000000
+     0.41%     0.00%  perf_target  [unknown]             [.] 0x40efe20000000000
+     0.41%     0.00%  perf_target  [unknown]             [.] 0x40f4bae000000000
+     0.41%     0.00%  perf_target  [unknown]             [.] 0x40e0a4a000000000
+     0.41%     0.00%  perf_target  [unknown]             [.] 0x40eda54000000000
+     0.41%     0.00%  perf_target  [unknown]             [.] 0x40ef2da000000000
+     0.41%     0.00%  perf_target  [kernel.kallsyms]     [k] do_fault
+     0.41%     0.00%  perf_target  [kernel.kallsyms]     [k] do_read_fault
+     0.41%     0.00%  perf_target  [kernel.kallsyms]     [k] filemap_map_pages
+     0.41%     0.00%  perf_target  [unknown]             [.] 0x40e94f8000000000
+     0.41%     0.00%  perf_target  [unknown]             [.] 0x40f6d7a000000000
+     0.41%     0.00%  perf_target  [unknown]             [.] 0x40f5516000000000
+     0.41%     0.00%  perf_target  [unknown]             [.] 0x40ea81c000000000
+     0.41%     0.00%  perf_target  [unknown]             [.] 0x40e9116000000000
+     0.41%     0.00%  perf_target  [unknown]             [.] 0x40f8602000000000
+     0.41%     0.00%  perf_target  [unknown]             [.] 0x40e3302000000000
+     0.41%     0.00%  perf_target  [unknown]             [.] 0x40f5a42000000000
+     0.41%     0.00%  perf_target  [unknown]             [.] 0x40e3056000000000
+     0.41%     0.00%  perf_target  [unknown]             [.] 0x40ee832000000000
+     0.41%     0.00%  perf_target  [unknown]             [.] 0x40ce148000000000
+     0.41%     0.00%  perf_target  [unknown]             [.] 0x40f2418000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40db5b4000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40e92b4000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40d8ae4000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40da770000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40e823e000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40cd828000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40b25a0000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40be5f0000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40f0228000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40f2398000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40e90d8000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40ccdd8000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40d6020000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40e454e000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40e41c4000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40ecc1e000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40f85db000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40f828c000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40f7084000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40dfe28000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40a71c0000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40ddb3c000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40f4a32000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40d0a18000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40f7a35000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40dd138000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40e6046000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40d5b38000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40f2e42000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40c5498000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40f299d000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40b3dd0000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40d8c60000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40f74f4000000000
+     0.40%     0.00%  perf_target  [unknown]             [.] 0x40f38ce000000000
+     0.39%     0.00%  perf_target  [unknown]             [.] 0x4088900000000000
+     0.39%     0.00%  perf_target  [unknown]             [.] 0x40ea000000000000
+     0.39%     0.00%  perf_target  [unknown]             [.] 0x40f6def000000000
+     0.39%     0.00%  perf_target  [unknown]             [.] 0x40f0f4b000000000
+     0.39%     0.00%  perf_target  [unknown]             [.] 0x40f3114000000000
+     0.39%     0.00%  perf_target  [unknown]             [.] 0x40f2c2c000000000
+     0.39%     0.00%  perf_target  [unknown]             [.] 0x40e2e92000000000
+     0.39%     0.00%  perf_target  [unknown]             [.] 0x40b7510000000000
+     0.39%     0.00%  perf_target  [unknown]             [.] 0x40f62f6000000000
+     0.39%     0.00%  perf_target  [unknown]             [.] 0x40c0940000000000
+     0.39%     0.00%  perf_target  [unknown]             [.] 0x40ecbb6000000000
+     0.39%     0.00%  perf_target  [unknown]             [.] 0x40eb5e0000000000
+     0.39%     0.00%  perf_target  [unknown]             [.] 0x40b9910000000000
+     0.39%     0.00%  perf_target  [unknown]             [.] 0x40f0310000000000
+     0.39%     0.00%  perf_target  [unknown]             [.] 0x40af220000000000
+     0.39%     0.00%  perf_target  [unknown]             [.] 0x40f47b0000000000
+     0.38%     0.00%  perf_target  [unknown]             [.] 0x40df8f8000000000
+     0.38%     0.00%  perf_target  [unknown]             [.] 0x40cdcf0000000000
+     0.38%     0.00%  perf_target  [unknown]             [.] 0x40e9604000000000
+     0.38%     0.00%  perf_target  [unknown]             [.] 0x40f4331000000000
+     0.37%     0.00%  perf_target  [unknown]             [.] 0x40e51a8000000000
+     0.37%     0.00%  perf_target  [unknown]             [.] 0x7669736e65746e69
+     0.37%     0.00%  perf_target  libc.so.6             [.] __GI___libc_write
+     0.37%     0.00%  perf_target  [unknown]             [.] 0x40d261c000000000
+     0.37%     0.00%  perf_target  [unknown]             [.] 0x40dda28000000000
+     0.36%     0.36%  perf_target  [kernel.kallsyms]     [k] clear_page_erms
+     0.36%     0.00%  perf_target  [kernel.kallsyms]     [k] do_anonymous_page
+     0.36%     0.00%  perf_target  [kernel.kallsyms]     [k] alloc_anon_folio
+     0.36%     0.00%  perf_target  [kernel.kallsyms]     [k] vma_alloc_folio
+     0.36%     0.00%  perf_target  [kernel.kallsyms]     [k] alloc_pages_mpol
+     0.36%     0.00%  perf_target  [kernel.kallsyms]     [k] __alloc_pages
+     0.36%     0.00%  perf_target  [kernel.kallsyms]     [k] get_page_from_freelist
+     0.35%     0.35%  perf_target  [kernel.kallsyms]     [k] native_irq_return_iret
+     0.33%     0.00%  perf_target  [kernel.kallsyms]     [k] vm_mmap_pgoff
+     0.33%     0.00%  perf_target  [kernel.kallsyms]     [k] do_mmap
+     0.33%     0.00%  perf_target  [kernel.kallsyms]     [k] mmap_region
+     0.33%     0.00%  perf_target  [kernel.kallsyms]     [k] __mmap_region
+     0.31%     0.31%  perf_target  libc.so.6             [.] sysmalloc
+     0.31%     0.00%  perf_target  [unknown]             [.] 0000000000000000
+     0.31%     0.00%  perf_target  libc.so.6             [.] __brk
+     0.29%     0.29%  perf_target  [kernel.kallsyms]     [k] folio_add_file_rmap_ptes
+     0.29%     0.00%  perf_target  [unknown]             [k] 0x0000000000000040
+     0.29%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] _dl_sysdep_start
+     0.29%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] dl_main
+     0.29%     0.00%  perf_target  libc.so.6             [.] __strnlen_ifunc
+     0.29%     0.00%  perf_target  [kernel.kallsyms]     [k] set_pte_range
+     0.25%     0.25%  perf_target  [kernel.kallsyms]     [k] mas_push_data
+     0.25%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] _dl_map_object
+     0.25%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] mmap64
+     0.25%     0.00%  perf_target  [kernel.kallsyms]     [k] __x64_sys_mmap
+     0.25%     0.00%  perf_target  [kernel.kallsyms]     [k] ksys_mmap_pgoff
+     0.25%     0.00%  perf_target  [kernel.kallsyms]     [k] mas_store_prealloc
+     0.25%     0.00%  perf_target  [kernel.kallsyms]     [k] mas_wr_store_entry.isra.0
+     0.25%     0.00%  perf_target  [kernel.kallsyms]     [k] mas_wr_modify
+     0.25%     0.00%  perf_target  [kernel.kallsyms]     [k] mas_wr_bnode
+     0.19%     0.19%  perf_target  ld-linux-x86-64.so.2  [.] strcmp
+     0.19%     0.00%  perf_target  [unknown]             [.] 0x732e6362696c0036
+     0.16%     0.00%  perf_target  [unknown]             [k] 0x00007604f28eb04b
+     0.16%     0.08%  perf_target  [kernel.kallsyms]     [k] kmem_cache_alloc
+     0.16%     0.00%  perf_target  [kernel.kallsyms]     [k] __x64_sys_execve
+     0.16%     0.00%  perf_target  [kernel.kallsyms]     [k] do_execveat_common.isra.0
+     0.16%     0.00%  perf_target  [kernel.kallsyms]     [k] bprm_execve
+     0.16%     0.00%  perf_target  [kernel.kallsyms]     [k] bprm_execve.part.0
+     0.16%     0.00%  perf_target  [kernel.kallsyms]     [k] exec_binprm
+     0.16%     0.00%  perf_target  [kernel.kallsyms]     [k] search_binary_handler
+     0.16%     0.00%  perf_target  [kernel.kallsyms]     [k] load_elf_binary
+     0.12%     0.12%  perf_target  [kernel.kallsyms]     [k] next_uptodate_folio
+     0.12%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] _dl_start_user
+     0.12%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] _dl_setup_hash
+     0.08%     0.08%  perf_target  [kernel.kallsyms]     [k] ___slab_alloc
+     0.08%     0.00%  perf_target  [kernel.kallsyms]     [k] arch_setup_additional_pages
+     0.08%     0.00%  perf_target  [kernel.kallsyms]     [k] map_vdso
+     0.08%     0.00%  perf_target  [kernel.kallsyms]     [k] _install_special_mapping
+     0.08%     0.00%  perf_target  [kernel.kallsyms]     [k] __install_special_mapping
+     0.08%     0.00%  perf_target  [kernel.kallsyms]     [k] elf_load
+     0.08%     0.00%  perf_target  [kernel.kallsyms]     [k] insert_vm_struct
+     0.08%     0.00%  perf_target  [kernel.kallsyms]     [k] vm_mmap
+     0.08%     0.00%  perf_target  [kernel.kallsyms]     [k] vma_link
+     0.08%     0.00%  perf_target  [kernel.kallsyms]     [k] mas_preallocate
+     0.08%     0.00%  perf_target  [kernel.kallsyms]     [k] mas_node_count_gfp
+     0.08%     0.00%  perf_target  [kernel.kallsyms]     [k] mas_alloc_nodes
+     0.08%     0.00%  perf_target  [kernel.kallsyms]     [k] vm_area_alloc
+     0.08%     0.00%  perf_target  [kernel.kallsyms]     [k] __memcg_slab_post_alloc_hook
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

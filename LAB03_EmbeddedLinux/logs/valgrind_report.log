@@ -1,0 +1,32 @@
+==54650== Memcheck, a memory error detector
+==54650== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==54650== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==54650== Command: /home/lnnam250206/embedded_lab3/output/leaky_app
+==54650== Parent PID: 54597
+==54650== 
+==54650== 
+==54650== HEAP SUMMARY:
+==54650==     in use at exit: 500 bytes in 3 blocks
+==54650==   total heap usage: 4 allocs, 1 frees, 1,524 bytes allocated
+==54650== 
+==54650== 100 bytes in 1 blocks are definitely lost in loss record 1 of 3
+==54650==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==54650==    by 0x10919E: main (leaky_app.c:7)
+==54650== 
+==54650== 200 bytes in 1 blocks are definitely lost in loss record 2 of 3
+==54650==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==54650==    by 0x1091AC: main (leaky_app.c:8)
+==54650== 
+==54650== 200 bytes in 1 blocks are definitely lost in loss record 3 of 3
+==54650==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==54650==    by 0x1091BA: main (leaky_app.c:9)
+==54650== 
+==54650== LEAK SUMMARY:
+==54650==    definitely lost: 500 bytes in 3 blocks
+==54650==    indirectly lost: 0 bytes in 0 blocks
+==54650==      possibly lost: 0 bytes in 0 blocks
+==54650==    still reachable: 0 bytes in 0 blocks
+==54650==         suppressed: 0 bytes in 0 blocks
+==54650== 
+==54650== For lists of detected and suppressed errors, rerun with: -s
+==54650== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)
