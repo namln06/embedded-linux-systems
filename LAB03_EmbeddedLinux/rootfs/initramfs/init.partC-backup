@@ -1,0 +1,52 @@
+#!/bin/sh
+
+mount -t devtmpfs devtmpfs /dev
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+
+echo ""
+echo "======================================"
+echo " Embedded Linux LAB 2"
+echo " Character Device Driver Test"
+echo "======================================"
+
+MODULE="/lib/modules/5.15.223/extra/lab2_driver.ko"
+
+if [ -f "$MODULE" ]; then
+    echo "[LAB2] Loading character driver..."
+    insmod "$MODULE"
+    echo "[LAB2] insmod exit code: $?"
+else
+    echo "[LAB2] ERROR: module file not found"
+fi
+
+echo ""
+echo "===== DEVICE NODE ====="
+if [ -e /dev/lab2 ]; then
+    ls -l /dev/lab2
+else
+    echo "[LAB2] /dev/lab2 not created automatically"
+    if command -v mknod >/dev/null 2>&1; then
+        mknod /dev/lab2 c 240 0
+        echo "[LAB2] mknod exit code: $?"
+    fi
+fi
+
+echo ""
+echo "===== DRIVER READ/WRITE TEST ====="
+if [ -c /dev/lab2 ]; then
+    echo "Hello from LAB2" > /dev/lab2
+    echo "[LAB2] write exit code: $?"
+    echo "[LAB2] read result:"
+    cat /dev/lab2
+else
+    echo "[LAB2] Device node is unavailable"
+fi
+
+echo ""
+echo "===== KERNEL LOG ====="
+dmesg | tail -n 25
+
+echo ""
+echo "[LAB2] Interactive shell ready."
+exec /bin/sh
